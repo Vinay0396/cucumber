@@ -1,0 +1,12 @@
+Feature: Login
+
+Scenario: Successful login with valid credentials
+     Given User Launch Chrome Browser
+     When  User open URL "https://kite.zerodha.com" 
+     And User enters Username as "LLD564" and Password as "9122105297a@A" 
+     And User enters Pin 
+     And  Click on Login
+     Then Profile name should be "LLD564"
+     When User click on Log out link
+     Then it is Logged Out
+     And close browser
